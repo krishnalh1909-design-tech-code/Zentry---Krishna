@@ -10,7 +10,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: #dfdff2;
-  font-family: 'Roobert', sans-serif;
+  font-family: "Roobert", sans-serif;
 }
 
 /* -------------------------Loader---------------------------------- */
@@ -88,7 +88,8 @@ body {
 }
 
 @keyframes dotFade {
-  0%, 100% {
+  0%,
+  100% {
     background-color: black;
   }
   50% {
@@ -125,10 +126,177 @@ body {
   }
 }
 
-
 /* -------------------------------Main--------------------------- */
-.main{
+.main {
+  overflow-x: hidden;
+}
+
+/* --------------------------Navbar -------------------------------------- */
+.navbar {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  /* background-color: rgb(72, 69, 69); */
+  position: absolute;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw;
+  z-index: 99;
+  font-family: sans-serif;
+  font-size: 0.7vw;
+  color: #dfdff2;
+  cursor: pointer;
+}
+
+.navbar svg {
+  font-size: 2vw;
+}
+
+.navbar-part1 {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.navbar-part2 {
+  height: max-content;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: green; */
+}
+
+.navbar-part1 h3:nth-child(n) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: max-content;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.8vw;
+  transition: all ease 0.5s;
+}
+
+.navbar-part2 h3:nth-child(n) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: max-content;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.8vw;
+  transition: all ease 0.5s;
+}
+
+.navbar-part1 h3:hover,
+.navbar-part2 h3:hover {
+  background-color: #dfdff2;
+  color: black;
+}
+
+/* --------------------
+   Responsive Styles
+--------------------- */
+/* Tablet Screens (<= 1024px) */
+@media (max-width: 1024px) {
+  .navbar {
+    font-size: 0.9vw;
+    padding: 1.5vw 2vw;
+  }
+
+  .navbar svg {
+    font-size: 3.3vw;
+  }
+
+  .navbar-part1 {
+    gap: 30px;
+  }
+
+  .navbar-part2 {
+    width: 45%;
+  }
+
+  .navbar-part1 h3:nth-child(n) {
+    font-size: 2vw;
+  }
+
+  .navbar-part2 h3:nth-child(n) {
+    font-size: 2vw;
+  }
+
+
+}
+
+/* Mobile Screens (<= 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    font-size: 1vw;
+    padding: 1vw 2vw;
+  }
+
+  .navbar svg {
+    font-size: 4vw;
+  }
+
+  .navbar-part1 {
+    gap: 20px;
+  }
+
+  .navbar-part2 {
+    width: 45%;
+  }
+
+  .navbar-part1 h3:nth-child(n) {
+    font-size: 2.5vw;
+  }
+
+  .navbar-part2 h3:nth-child(n) {
+    font-size: 2.5vw;
+  }
+}
+
+/* Small Mobile Screens (<= 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    font-size: 9vw;
+    padding: 0.8vw 1.5vw;
+  }
+
+  .navbar svg {
+    font-size: 5vw;
+  }
+
+  .navbar-part1 {
+    font-size: 5vw;
+    gap: 15px;
+  }
+
+  .navbar-part1 h3:nth-child(n) {
+    font-size: 2vw;
+  }
+
+  .navbar-part2 h3:nth-child(n) {
+    font-size: 2vw;
+  }
+
+  .navbar-part2 {
+    width: 48%;
+  }
+}
+
+
+/* --------------------Page 1----------------------------------------- */
+
+.page1 {
   height: 100vh;
-  width: 100vw;
-  background-color: red;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 99;
+  background-color: #383636;
 }
